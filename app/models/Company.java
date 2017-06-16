@@ -11,17 +11,36 @@ import play.data.validation.*;
 /**
  * Company entity managed by Ebean
  */
-@Entity 
+@Entity
+@Table(name = "company")
 public class Company extends com.avaje.ebean.Model {
 
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(name = "id")
     public Long id;
     
     @Constraints.Required
+    @Column(name = "name")
     public String name;
-    
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /**
      * Generic query helper for entity Company with id Long
      */

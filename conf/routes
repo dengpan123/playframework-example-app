@@ -22,3 +22,10 @@ POST    /computers/:id              controllers.HomeController.update(id:Long)
 
 # Delete a computer
 POST    /computers/:id/delete       controllers.HomeController.delete(id:Long)
+
+
+POST  /jsondata/getrequest          controllers.JsonTestController.getRequest()
+POST  /jsondata/queryComputer       controllers.JsonTestController.queryComputer()
+POST  /jsondata/addcomputer         controllers.JsonTestController.addComputer()
+POST  /jsondata/update              controllers.JsonTestController.updateComputer()
+POST  /jsondata/delete              controllers.JsonTestController.delele()
